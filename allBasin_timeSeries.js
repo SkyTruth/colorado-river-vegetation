@@ -73,9 +73,9 @@ var ws_filePrefix = watershed.file_name_prefix;
 var huc_06 = ee.FeatureCollection("USGS/WBD/2017/HUC06").filter(ee.Filter.eq('huc6', ws_huc6));
 var huc_12 = ee.FeatureCollection("USGS/WBD/2017/HUC12").filter(ee.Filter.and(ee.Filter.gte('huc12', ws_huc12[0]),ee.Filter.lt('huc12', ws_huc12[1])));
 
-// Visualize the HUC6 and HUC12s
-Map.addLayer(huc_06,{color:'#FF0000'},watershed_name+'- HUC 6');
-Map.addLayer(huc_12,{color:'#FF7F00'},watershed_name+'- HUC 12');
+// Visualize the HUC6 and HUC12s if desired
+// Map.addLayer(huc_06,{color:'#FF0000'},watershed_name+'- HUC 6');
+// Map.addLayer(huc_12,{color:'#FF7F00'},watershed_name+'- HUC 12');
 
 // Test Run Loop (dry run). This will print the Export Descriptions and File Name Prefixes for the specified watershed, it will not start any of the export tasks.
 print('\n\n\n DRY RUN. Uncomment lines 90-106 to run data exports.\n\n\n');
